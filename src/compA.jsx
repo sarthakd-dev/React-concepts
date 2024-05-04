@@ -1,6 +1,7 @@
 import React from "react";
 import {Theme, NewTheme} from "./App";
-
+import LoginBtn from './LoginBtn';
+import LogoutButton from './LogoutBtn';
 function CompA(){
 
     return(
@@ -18,6 +19,8 @@ function CompA(){
             )
         }}
         </Theme.Consumer>
+      <LoginBtn></LoginBtn>
+      <LogoutButton></LogoutButton>
       </>  
     )
 }

@@ -8,6 +8,7 @@ import './App.css';
 import CompA from './compA';
 import { createContext } from 'react';
 
+
  // create context using context api
  const Theme = createContext();
  const NewTheme = createContext();
@@ -52,7 +53,7 @@ function App() {
 
         {/* =========form starts here =====  */}
       {/* {currentForm == "Login"?  <Login onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm}/>} */}
-      <h1>Try the new login technology</h1> 
+      <h1>Try the new login technology </h1> 
       <Theme.Provider value={'Ankit'}>
         <NewTheme.Provider value={"Try it!"}>
         <CompA/>
