@@ -2,8 +2,10 @@ import React from "react";
 import {Theme, NewTheme} from "./App";
 import LoginBtn from './LoginBtn';
 import LogoutButton from './LogoutBtn';
+import {useAuth0} from '@auth0/auth0-react';
+import Profile from './Profile';
 function CompA(){
-
+    const {user, isAuthenticated, isLoading} = useAuth0();
     return(
         <>
         <Theme.Consumer>
@@ -19,8 +21,9 @@ function CompA(){
             )
         }}
         </Theme.Consumer>
-      <LoginBtn></LoginBtn>
-      <LogoutButton></LogoutButton>
+        { isAuthenticated && <Profile></Profile>}
+       { isAuthenticated ?<LogoutButton></LogoutButton>: <LoginBtn></LoginBtn>}
+       
       </>  
     )
 }
