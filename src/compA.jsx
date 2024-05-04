@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import {Theme, NewTheme} from "./App";
 
 function CompA(){
-
+const themeVar = useContext(Theme);
+const name = useContext(NewTheme);
     return(
         <>
-        <Theme.Consumer>
+         <h1>Theme {themeVar} {name}</h1>
+        {/* <Theme.Consumer>
             
             {(themeVar) =>{
         return (
@@ -17,7 +19,7 @@ function CompA(){
                 }}</NewTheme.Consumer>  
             )
         }}
-        </Theme.Consumer>
+        </Theme.Consumer> */}
       </>  
     )
 }
